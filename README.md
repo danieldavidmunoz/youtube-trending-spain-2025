@@ -47,4 +47,4 @@ El objetivo principal es **identificar patrones en los videos trending (relevant
 ## Cómo usar este repositorio
 1. Clonar el repo:  
    ```bash
-   git clone https://github.com/danieldavidmunoz/youtube-trending-spain-2025
+   git clone https://github.com/danieldavidmunoz/youtube-trending-spain-2025.git

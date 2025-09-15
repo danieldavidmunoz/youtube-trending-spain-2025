@@ -11,7 +11,7 @@ El objetivo principal es **identificar patrones en los videos trending (relevant
 1. **Identificar y explorar los videos trending (relevantes)** en YouTube España a partir de los vídeos obtenidos en la API de la plataforma (categoría `mostPopular`), con una selección de **300 videos diarios**.  
 2. **Generar un modelo predictivo** que estime, en términos probabilísticos, las posibilidades de que un vídeo se convierta en trending (relevante).  
 
-> ⚡ *Nota*: La categoría **trending (relevante)** se define como una métrica meta que pondera principalmente la interacción (likes + comments), sin dejar de lado las visualizaciones.
+ *Nota*: La categoría **trending (relevante)** se define como una métrica meta que pondera principalmente la interacción (likes + comments), sin dejar de lado las visualizaciones.
 
 ---
 
@@ -47,4 +47,4 @@ El objetivo principal es **identificar patrones en los videos trending (relevant
 ## Cómo usar este repositorio
 1. Clonar el repo:  
    ```bash
-   git clone https://github.com/usuario/nombre-repo.git
+   git clone https://github.com/danieldavidmunoz/youtube-trending-spain-2025

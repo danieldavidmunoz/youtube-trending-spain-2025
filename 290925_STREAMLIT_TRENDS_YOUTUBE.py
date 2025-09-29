@@ -15,25 +15,18 @@ import textwrap
 
 #st.set_page_config(page_title="Views vs Engagement (Cuadrantes)", layout="centered")
 
-# ---------- Carga de datos ----------
-@st.cache_data(show_spinner=False)
-
-
 @st.cache_data
 def load_df(file):
     if file.name.endswith(".csv"):
         return pd.read_csv(file)
-    else:
-        return pd.read_parquet(file)
+    return pd.read_parquet(file)
 
-# 👇 Aquí pedimos al usuario subir un archivo
 st.info("Sube tu dataset (.parquet o .csv)")
-up = st.file_uploader("Dataset", type=["parquet", "csv"])
-
+up = st.file_uploader("Dataset", type=["parquet","csv"])
 if up is None:
-    st.stop()  # detiene la app hasta que se suba un archivo
+    st.stop()
 
-df_1 = load_df(up).copy()
+df_1 = load_df(up).copy()   # <-- ahora SÍ pasas 'up'
 
 st.set_page_config(page_title="Views vs Engagement (Cuadrantes)", layout="centered")
 

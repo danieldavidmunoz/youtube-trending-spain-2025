@@ -19,11 +19,21 @@ import textwrap
 @st.cache_data(show_spinner=False)
 
 
-def load_df():
-    df = pd.read_parquet(
-        "/Users/danielmunoz/Documents/EDUCACION/DATA_ANALIST/CURSOS/TFM/DATA/PROCESSED/df_YouTube_2025TFM_2.0.parquet"
-    )
-    return df
+@st.cache_data
+def load_df(file):
+    if file.name.endswith(".csv"):
+        return pd.read_csv(file)
+    else:
+        return pd.read_parquet(file)
+
+# 👇 Aquí pedimos al usuario subir un archivo
+st.info("Sube tu dataset (.parquet o .csv)")
+up = st.file_uploader("Dataset", type=["parquet", "csv"])
+
+if up is None:
+    st.stop()  # detiene la app hasta que se suba un archivo
+
+df_1 = load_df(up).copy()
 
 st.set_page_config(page_title="Views vs Engagement (Cuadrantes)", layout="centered")
 
@@ -1361,4 +1371,4 @@ plt.title("Promedio de viralidad (ratio) por canal en vídeos virales")
 plt.show()
 st.pyplot(fig39)
 
-fig.write_html("/Users/danielmunoz/Documents/EDUCACION/DATA_ANALIST/CURSOS/TFM/REPORTS/grafico.html")
+#fig.write_html("/Users/danielmunoz/Documents/EDUCACION/DATA_ANALIST/CURSOS/TFM/REPORTS/grafico.html")

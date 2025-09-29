@@ -1,0 +1,23 @@
+# Requirements file for Python dependencies
+# To install these dependencies, run: pip install -r requirements.txt
+
+# Librería principal
+streamlit
+
+# Ciencia de datos / ML
+pandas
+numpy
+scikit-learn
+statsmodels
+
+# Visualización
+matplotlib
+seaborn
+plotly
+
+# Manejo de formatos
+pyarrow    # para parquet
+openpyxl   # si alguna vez exportas a Excel
+
+# Utilidades (opcional, pero a veces útil)
+textwrap3

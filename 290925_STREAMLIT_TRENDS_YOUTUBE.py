@@ -15,22 +15,7 @@ import textwrap
 
 #st.set_page_config(page_title="Views vs Engagement (Cuadrantes)", layout="centered")
 
-@st.cache_data
-def load_df(file):
-    if file.name.endswith(".csv"):
-        return pd.read_csv(file)
-    return pd.read_parquet(file)
-
-st.info("Sube tu dataset (.parquet o .csv)")
-up = st.file_uploader("Dataset", type=["parquet","csv"])
-if up is None:
-    st.stop()
-
-df_1 = load_df(up).copy()   # <-- ahora SÍ pasas 'up'
-
-st.set_page_config(page_title="Views vs Engagement (Cuadrantes)", layout="centered")
-
-st.title("📊 Análisis de canales y videos de YouTube")
+df_1 = pd.read_parquet("df_YouTube_2025TFM_2.0.parquet")
 
 
 
@@ -38,7 +23,7 @@ st.title("📊 Análisis de canales y videos de YouTube")
 
 st.header("Gráfica de Vídeos")
 
-df_1 = load_df().copy()
+#df_1 = load_df().copy()
 variables = ["views", "likes", "comments"]
 for var in variables:
     fig01=plt.figure(figsize=(8,5))
@@ -71,7 +56,7 @@ st.pyplot(fig0)
 st.subheader("Duracion y engagement rate") 
 
 
-df_1 = load_df().copy()
+#df_1 = load_df().copy()
 
 views_p25, views_p75 = df_1["views"].quantile([0.25, 0.75])
 eng_p25, eng_p75     = df_1["engagement_rate"].quantile([0.25, 0.75])

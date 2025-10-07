@@ -1,23 +1,43 @@
 # Requirements file for Python dependencies
 # To install these dependencies, run: pip install -r requirements.txt
 
-# Librería principal
-streamlit
+# Núcleo científico y manipulación de datos
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.11.4
 
-# Ciencia de datos / ML
-pandas
-numpy
-scikit-learn
-statsmodels
+# Machine Learning general
+scikit-learn==1.4.2
+joblib==1.5.2
+threadpoolctl==3.6.0
 
-# Visualización
-matplotlib
-seaborn
-plotly
+# Deep Learning
+torch==2.8.0
+xgboost==2.1.1
 
-# Manejo de formatos
-pyarrow    # para parquet
-openpyxl   # si alguna vez exportas a Excel
+# Manejo de desbalance y explicabilidad
+imbalanced-learn==0.12.0
+shap==0.46.0
 
-# Utilidades (opcional, pero a veces útil)
-textwrap3
+# Reducción de dimensión y clustering avanzado
+umap-learn        # si no está ya como paquete, sustituye "umap" por "umap-learn"
+hdbscan           # opcional si trabajas con clustering jerárquico
+
+# Procesamiento de texto / embeddings
+transformers==4.56.2
+sentence-transformers==5.1.1
+tokenizers==0.22.1
+huggingface-hub==0.35.3
+
+# Visualización y análisis
+matplotlib==3.8.4
+seaborn==0.13.2
+plotly             # opcional, para gráficos interactivos
+tqdm==4.67.1
+
+# Soporte y utilidades
+requests==2.32.5
+pyyaml==6.0.3
+pillow==11.3.0
+sympy==1.14.0
+packaging==25.0

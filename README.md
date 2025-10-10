@@ -1,7 +1,7 @@
 # TFM - Análisis y Predicción de Videos Trending en YouTube España  
 
-Este repositorio contiene el trabajo de mi **Trabajo de Fin de Máster (TFM)** en Análisis de Datos.  
-El objetivo principal es **identificar patrones en los videos trending (relevantes) de YouTube España** y **construir un modelo de Machine Learning** que prediga la probabilidad de que un video se convierta en viral.  
+Este repositorio contiene el trabajo de mi Trabajo de Fin de Máster (TFM) en Análisis de Datos.
+El objetivo principal es identificar patrones en los videos trending (relevantes) de YouTube España y construir un modelo de Machine Learning que prediga la probabilidad de que un video se convierta en viral. 
 
 ---
 

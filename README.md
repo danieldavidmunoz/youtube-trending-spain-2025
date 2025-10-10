@@ -7,32 +7,60 @@ El objetivo principal es **identificar patrones en los videos trending (relevant
 
 ## Objetivos
 
-### Objetivos principales
-1. **Identificar y explorar los videos trending (relevantes)** en YouTube España a partir de los vídeos obtenidos en la API de la plataforma (categoría `mostPopular`), con una selección de **300 videos diarios**.  
-2. **Generar un modelo predictivo** que estime, en términos probabilísticos, las posibilidades de que un vídeo se convierta en trending (relevante).  
+### Objetivos general
 
- *Nota*: La categoría **trending (relevante)** se define como una métrica meta que pondera principalmente la interacción (likes + comments), sin dejar de lado las visualizaciones.
+Desarrollar un modelo de análisis y predicción del rendimiento de vídeos en YouTube España, mediante técnicas de *machine learning* supervisadas y no supervisadas, con el fin de identificar los factores cuantitativos y semánticos que determinan el **engagement** y la **visibilidad** dentro de la lógica algorítmica de la plataforma.
 
 ---
 
 ### Objetivos secundarios
-1. Crear una **propuesta de indicador de video trending /Índice de Alcance-Engagement/**, tomando los vídeos que cumplen la condición de estar en el **cuarto cuartil** tanto en visionados como en likes y comments.  
-2. Explorar e identificar las **correlaciones** de los vídeos que más engagement, comentarios, likes y views generan en relación con:  
-   - categorías temáticas,  
-   - duración del vídeo,  
-   - etiquetas,  
-   - y otros factores.  
-3. Identificar y detectar **correlaciones significativas en los canales** en relación con número de publicaciones, seguidores y views totales.  
-4. **Identificar comunidades de contenido nicho**, agrupando videos o canales según tags, categorías y métricas de engagement mediante modelos de clustering de *machine learning*.  
+1. **Extracción y estructuración del dataset**  
+   Obtener y depurar un conjunto de datos representativo de vídeos de YouTube España a partir de la API v3, centrado en la categoría `mostPopular` y en contenidos con menos de 50.000 visualizaciones, con el fin de analizar el comportamiento de los vídeos emergentes.
+
+2. **Exploración de variables estructurales y semánticas**  
+   Analizar las relaciones entre las características de los vídeos (categoría, duración, etiquetas, descripciones, etc.) y sus métricas de rendimiento (views, likes, comentarios y engagement rate) mediante técnicas estadísticas y visualización de datos.
+
+3. **Modelado predictivo supervisado**  
+   Construir modelos de clasificación y regresión que permitan:
+   - Estimar la probabilidad de que un vídeo alcance un alto nivel de engagement (cuartil superior).  
+   - Predecir el número esperado de visualizaciones (*views*).
+
+4. **Identificación de patrones y comunidades mediante aprendizaje no supervisado**  
+   Implementar técnicas de reducción de dimensionalidad (*PCA, UMAP*) y *clustering* para detectar patrones latentes y comunidades de contenido, identificando posibles nichos temáticos o comportamientos algorítmicos.
+
+5. **Interpretación teórico-práctica en el marco de la sociedad plataforma**  
+   Analizar los resultados de los modelos y clusters desde los marcos conceptuales de la *sociedad plataforma* y la *curaduría algorítmica*, relacionando las dinámicas de visibilidad y monetización con los procesos de mediación tecnológica de YouTube.
 
 ---
 
-## Estructura del repositorio
-- `data/` → datasets en bruto y procesados.  
-- `notebooks/` → cuadernos Jupyter con la exploración y el modelado.  
-- `src/` → scripts de Python para limpieza, extracción y modelado.  
-- `docs/` → documentación y resultados intermedios.  
-- `README.md` → este archivo.  
+## Marco teórico aplicado al análisis
+
+El proyecto integra los resultados empíricos con las principales teorías contemporáneas sobre plataformas digitales:
+
+| Enfoque teórico | Autores clave | Aplicación en el proyecto |
+|------------------|---------------|----------------------------|
+| **Sociedad plataforma** | Poell, Nieborg & Van Dijck (2019) | Explica cómo YouTube actúa como infraestructura socio-técnica y económica de visibilidad. |
+| **Curaduría algorítmica** | Gillespie (2018), Jenkins (2006) | Interpreta los patrones de clustering y visibilidad como efectos de mediación algorítmica. |
+| **Economía de la atención** | Davenport & Beck, Goldhaber | Reinterpreta las métricas de rendimiento como indicadores de valor atencional. |
+| **Lógica de monetización y extracción de datos** | Srnicek (2017), Zuboff (2019) | Relaciona los patrones detectados con la economía política del dato y la visibilidad. |
+
+---
+
+## Elementos prácticos que sustentan el análisis
+
+- **Resultados cuantitativos interpretables:**  
+  - Feature importance de los modelos predictivos.  
+  - Distribución de categorías y etiquetas por clusters.  
+  - Comparativas entre vídeos emergentes y de alta visibilidad.  
+
+- **Visualizaciones clave:**  
+  - Mapas de clusters (UMAP/PCA) con métricas superpuestas.  
+  - Gráficos de importancia de variables y tasas de engagement.  
+  - Diagramas de comunidades temáticas.  
+
+- **Discusión crítica:**  
+  - Evaluación de sesgos algorítmicos y limitaciones del dataset.  
+  - Reflexión sobre cómo los algoritmos moldean la producción y consumo de contenido audiovisual.
 
 ---
 

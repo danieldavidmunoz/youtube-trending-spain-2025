@@ -20,18 +20,18 @@ Desarrollar un modelo de análisis y predicción del rendimiento de vídeos en Y
 2. **Extracción y estructuración del dataset**
    Preparación del dataset para su análisis estadístico y modelado, garantizando la coherencia, completitud y calidad de las variables.
 
-3. **Exploración de variables estructurales y semánticas**  
+4. **Exploración de variables estructurales y semánticas**  
    Analizar las relaciones entre las características de los vídeos (categoría, duración, etiquetas, descripciones, etc.) y sus métricas de rendimiento (views, likes, comentarios y engagement rate) mediante técnicas estadísticas y visualización de datos.
 
-4. **Modelado predictivo supervisado**  
+5. **Modelado predictivo supervisado**  
    Construir modelos de clasificación y regresión que permitan:
    - Estimar la probabilidad de que un vídeo alcance un alto nivel de engagement (cuartil superior).  
    - Predecir el número esperado de visualizaciones (*views*).
 
-5. **Identificación de patrones y comunidades mediante aprendizaje no supervisado**  
+6. **Identificación de patrones y comunidades mediante aprendizaje no supervisado**  
    Implementar técnicas de reducción de dimensionalidad (*PCA, UMAP*) y *clustering* para detectar patrones latentes y comunidades de contenido, identificando posibles nichos temáticos o comportamientos algorítmicos.
 
-6. **Interpretación teórico-práctica en el marco de la sociedad plataforma**  
+7. **Interpretación teórico-práctica en el marco de la sociedad plataforma**  
    Analizar los resultados de los modelos y clusters desde los marcos conceptuales de la *sociedad plataforma* y la *curaduría algorítmica*, relacionando las dinámicas de visibilidad y monetización con los procesos de mediación tecnológica de YouTube.
 
 ---

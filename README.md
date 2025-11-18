@@ -48,6 +48,18 @@ The study uses semantic embeddings, clustering, and SHAP interpretability to und
   - upload affordances, native metrics, derived ratios  
   - embeddings incorporated with PCA inside the ML pipeline  
 
+
+- **ML workflow**
+  - grouped 80/20 train–test split by channel  
+  - grouped 5-fold cross-validation  
+  - preprocessing: scaling, OneHotEncoder, PCA  
+
+- **Models tested**
+  - Logistic Regression, Decision Tree, Random Forest, XGBoost, Neural Network  
+
+- **Interpretability**
+  - SHAP summary plots and variable importance
+
 - **Variables used**
   <!-- Integrated summary of variable groups -->
 
@@ -68,16 +80,6 @@ The study uses semantic embeddings, clustering, and SHAP interpretability to und
   - **High engagement** (top quartile)  
   - **Views** (continuous regression target)
 
-- **ML workflow**
-  - grouped 80/20 train–test split by channel  
-  - grouped 5-fold cross-validation  
-  - preprocessing: scaling, OneHotEncoder, PCA  
-
-- **Models tested**
-  - Logistic Regression, Decision Tree, Random Forest, XGBoost, Neural Network  
-
-- **Interpretability**
-  - SHAP summary plots and variable importance  
 
 <!-- This reflects your actual pipeline accurately -->
 
